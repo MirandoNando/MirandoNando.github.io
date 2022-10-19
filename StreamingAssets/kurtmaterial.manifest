@@ -1,0 +1,51 @@
+ManifestFileVersion: 0
+CRC: 3247049712
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d8af066c900e24146a1a5b1411371678
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 82515b3694a1e5beae009c48c1198c34
+HashAppended: 0
+ClassTypes:
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/male_elegantsuit01.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/shoes03.mat
+- Assets/_Main/Submit/Ceiling Lamp/Texture/Materials/Ceiling Light3_Ceiling Light_BaseColor.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/tongue01.mat
+- Assets/_Main/Lukisan/Figura 4/Texture/Materials/Figura_004_Frame_BaseColor.mat
+- Assets/_Main/Lukisan/Figura 4/Texture/Materials/Figura_004_Photo_BaseColor.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/eyelashes01.mat
+- Assets/_Main/Plant1/Plant1/Texture/Materials/Plant1_Vase_Material_BaseColor 1.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/eyebrow001.mat
+- Assets/_Main/Plant1/Plant2/Texture/Materials/pngwing.com-2.mat
+- Assets/_Main/Lukisan/Figura 2/Texture/Materials/Figura_004_Ornaments_BaseColor.mat
+- Assets/_Main/Plant1/Plant2/Texture/Materials/Tanah.mat
+- Assets/_Main/Lukisan/Figura 2/Texture/Materials/LUKISAN 2.mat
+- Assets/_Main/Lukisan/Figura 3/Texture/Materials/Figura_003_Picture_003_BaseColor.mat
+- Assets/_Main/Plant1/Plant1/Texture/Materials/Plant1_Vase_Material_BaseColor 2.mat
+- Assets/_Main/Plant1/Plant1/Texture/Materials/Pflanze Blatt.mat
+- Assets/_Main/Lukisan/Figura 1/Texture/Materials/Figura_001_Picture_001_BaseColor.mat
+- Assets/_Main/Plant1/Plant1/Texture/Materials/Plant1_Vase_Material_BaseColor 3.mat
+- Assets/_Main/Submit/Materials/istockphoto-1197671817-170667a.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/short02.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/high-poly.mat
+- Assets/_Main/Submit/Room/Texture/Materials/Wall_Wall_BaseColor.mat
+- Assets/_Main/Plant1/Plant2/Texture/Materials/Plants2_Vase_Vase_Normal.mat
+- Assets/_Main/Submit/Bilik/Texture/Materials/Bilik_Wood_BaseColor.mat
+- Assets/_Main/Lukisan/Figura 3/Texture/Materials/Figura_003_Frame_BaseColor.mat
+- Assets/_Main/Plant1/Plant1/Texture/Materials/Plant1_Vase_Material_BaseColor.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/male_cauc_fit_suit.mat
+- Assets/SpitzSoft/Male Models Sampler/Male_Cauc/mats/teeth_base.mat
+- Assets/_Main/Lukisan/Figura 1/Texture/Materials/Figura_001_Frame_BaseColor.mat
+- Assets/_Main/Lukisan/Figura 2/Texture/Materials/Figura_004_Frame_BaseColor.mat
+- Assets/_Main/Lukisan/Figura 4/Texture/Materials/Figura_004_Frame_Normal.mat
+Dependencies: []
