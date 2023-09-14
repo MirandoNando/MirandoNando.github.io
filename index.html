@@ -9,7 +9,8 @@
   </head>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
+      <div id="fullscreen-btn"><img src="TemplateData/fullscreen.png"></div>
+      <canvas id="unity-canvas" width=1366 height=768 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -24,14 +25,25 @@
       </div>
     </div>
     <script>
-
+    
+    
+            // var screenresize = $('#alpha').get(0);
+            // screenresize.requestFullscreen();
+            // return false;
+  
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
+      
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var warningBanner = document.querySelector("#unity-warning");
-
+    
+      var fullscreenBtn = document.querySelector("#fullscreen-btn");
+      fullscreenBtn.addEventListener('click', function() {
+          canvas.requestFullscreen();
+          window.screen.orientation.lock('landscape');
+      })
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
       // If type=='warning', a yellow highlight color is used.
@@ -57,11 +69,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/C4C.loader.js";
+      var loaderUrl = buildUrl + "/CAC5.loader.js";
       var config = {
-        dataUrl: buildUrl + "/C4C.data.unityweb",
-        frameworkUrl: buildUrl + "/C4C.framework.js.unityweb",
-        codeUrl: buildUrl + "/C4C.wasm.unityweb",
+        dataUrl: buildUrl + "/CAC5.data.unityweb",
+        frameworkUrl: buildUrl + "/CAC5.framework.js.unityweb",
+        codeUrl: buildUrl + "/CAC5.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "CAC",
         productName: "Quiz_CAC",
@@ -94,8 +106,8 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1920px";
-        canvas.style.height = "1080px";
+        canvas.style.width = "1366px";
+        canvas.style.height = "768px";
       }
 
       loadingBar.style.display = "block";
