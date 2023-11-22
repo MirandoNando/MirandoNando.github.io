@@ -24,7 +24,7 @@
       </div> -->
 
       <div id="mobile-fullscreen">
-        <p>Click here to fullscreen</p>
+        <p>PLAY</p>
       </div>
     </div>
     <script>
@@ -32,10 +32,11 @@
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
       var progressBarFull = document.querySelector("#unity-progress-bar-full");
-      var fullscreenButton = document.querySelector("#unity-fullscreen-button");
+      //var fullscreenButton = document.querySelector("#unity-fullscreen-button");
       var fullscreenButton = document.querySelector("#mobile-fullscreen");
       var warningBanner = document.querySelector("#unity-warning");
       var displayMode = "none";
+      var isMobile = false;
 
       // Shows a temporary message banner/ribbon for a few seconds, or
       // a permanent error message on top of the canvas if type=='error'.
@@ -62,11 +63,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/CAC2.loader.js";
+      var loaderUrl = buildUrl + "/cac.loader.js";
       var config = {
-        dataUrl: buildUrl + "/CAC2.data.unityweb",
-        frameworkUrl: buildUrl + "/CAC2.framework.js.unityweb",
-        codeUrl: buildUrl + "/CAC2.wasm.unityweb",
+        dataUrl: buildUrl + "/cac.data.unityweb",
+        frameworkUrl: buildUrl + "/cac.framework.js.unityweb",
+        codeUrl: buildUrl + "/cac.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "CAC",
         productName: "Quiz_CAC",
@@ -92,6 +93,7 @@
         canvas.className = "unity-mobile";
 
         displayMode = "flex";
+        isMobile =true;
         // To lower canvas resolution on mobile devices to gain some
         // performance, uncomment the following line:
         // config.devicePixelRatio = 1;
@@ -100,7 +102,7 @@
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        displayMode = "none";
+        displayMode = "flex";
 
         canvas.style.width = "100%";
         canvas.style.height = "100%";
@@ -115,10 +117,12 @@
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
           loadingBar.style.display = "none";
-          fullscreenbutton.style.display = displaymode;
-          fullscreenbutton.onclick = () => {
-            unityinstance.setfullscreen(1);
-            screen.orientation.lock('landscape');
+          fullscreenButton.style.display = displayMode;
+          fullscreenButton.onclick = () => {
+          //unityInstance.openFullscreen(1)
+            openFullscreen(container);
+            if(isMobile==true) screen.orientation.lock('landscape');
+          fullscreenButton.style.display = "none"
           };
 
         }).catch((message) => {
@@ -126,6 +130,17 @@
         });
       };
       document.body.appendChild(script);
+
+
+      function openFullscreen(elem) {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
     </script>
   </body>
 </html>
